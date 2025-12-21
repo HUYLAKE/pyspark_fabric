@@ -34,20 +34,20 @@ Microsoft Fabric Data Warehouse (Gold)
 ## Các bước 
 - Đầu tiên ta có 1 file `AMZN.csv` nằm trong 1 folder Raw phần file của Data Lakehouse(Bronze)
 
-![image](Ảnh chụp màn hình 2025-12-20 011121.png)
+![image](https://github.com/HUYLAKE/pyspark_fabric/blob/8194c0e7d9faaeba30529a580711b6d3d2ec3c07/%E1%BA%A2nh%20ch%E1%BB%A5p%20m%C3%A0n%20h%C3%ACnh%202025-12-20%20011121.png)
 
 - Sau đó tiến hành dùng **Pyspark** ở phần **Notebook**
   + Trước tiên copy đường dẫn đến file đó
-  ```python
+```python
   csv_path = 'abfss://5ae214e2-27b6-46e8-930f-433076c9e8ac@onelake.dfs.fabric.microsoft.com/c58bb6c7-d77a-4b8b-872a-f6fb463fa9bf/Files/Raw/AMZN.csv'
-  ```
+```
   + Import các Type và Function của Pyspark để thực hiện biến đổi Schema và Transfomation
-  ```python
+```python
       from pyspark.sql.functions import *
       from pyspark.sql.types import *
-  ```
+```
   + Định nghĩa Schema cho tập dữ liệu
-  ```python
+```python
   schema = StructType([
     StructField("Date", DateType(), True),
     StructField("Open", DoubleType(), True),
@@ -55,8 +55,8 @@ Microsoft Fabric Data Warehouse (Gold)
     StructField("Low", DoubleType(), True),
     StructField("Close", DoubleType(), True),
     StructField("Adj Close", DoubleType(), True),
-    StructField("Volume", DoubleType(), True),
-])```
+    StructField("Volume", DoubleType(), True),])
+```
 
    + Đọc dữ liệu
 ```python
@@ -111,7 +111,7 @@ df.write.mode("append").synapsesql("Datawarehouse.Analytics.2001_stock")
 ```
 - Sau khi thành công ta mở Data Warehouse để xem liệu đã đổ dữ liệu thành công
 
-![image](Ảnh chụp màn hình 2025-12-20 014630.png)
+![image](https://github.com/HUYLAKE/pyspark_fabric/blob/8194c0e7d9faaeba30529a580711b6d3d2ec3c07/%E1%BA%A2nh%20ch%E1%BB%A5p%20m%C3%A0n%20h%C3%ACnh%202025-12-20%20014630.png)
 
 ## Và như vậy đã thành công <3
 ---
