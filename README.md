@@ -33,7 +33,8 @@ Microsoft Fabric Data Warehouse (Gold)
 ```
 ## Các bước 
 - Đầu tiên ta có 1 file `AMZN.csv` nằm trong 1 folder Raw phần file của Data Lakehouse(Bronze)
-  ![image](Ảnh chụp màn hình 2025-12-20 011121.png)
+
+![image](Ảnh chụp màn hình 2025-12-20 011121.png)
 
 - Sau đó tiến hành dùng **Pyspark** ở phần **Notebook**
   + Trước tiên copy đường dẫn đến file đó
@@ -55,8 +56,8 @@ Microsoft Fabric Data Warehouse (Gold)
     StructField("Close", DoubleType(), True),
     StructField("Adj Close", DoubleType(), True),
     StructField("Volume", DoubleType(), True),
-])
-```
+])```
+
    + Đọc dữ liệu
 ```python
 df = spark.read.format("csv").schema(schema).option("header", True).load(csv_path)
@@ -109,6 +110,7 @@ from com.microsoft.spark.fabric.Constants import Constants
 df.write.mode("append").synapsesql("Datawarehouse.Analytics.2001_stock")
 ```
 - Sau khi thành công ta mở Data Warehouse để xem liệu đã đổ dữ liệu thành công
+
 ![image](Ảnh chụp màn hình 2025-12-20 014630.png)
 
 ## Và như vậy đã thành công <3
