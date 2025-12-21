@@ -109,7 +109,8 @@ from com.microsoft.spark.fabric.Constants import Constants
 df.write.mode("append").synapsesql("Datawarehouse.Analytics.2001_stock")
 ```
 - Sau khi thành công ta mở Data Warehouse để xem liệu đã đổ dữ liệu thành công
-  ![image](Ảnh chụp màn hình 2025-12-20 014630.png)
+![image](Ảnh chụp màn hình 2025-12-20 014630.png)
+
 ## Và như vậy đã thành công <3
 ---
 
