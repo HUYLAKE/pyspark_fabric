@@ -2,7 +2,7 @@
 # 🚀 ETL Project: Lakehouse ➜ Data Warehouse using PySpark (Microsoft Fabric)
 
 ## 📌 Project Overview
-![images](ELT_Pyspark.png)
+![images](ETL_Pyspark.png)
 
 Dự án này mô phỏng một **ETL pipeline thực tế** trong **Microsoft Fabric**, sử dụng **PySpark** để trích xuất dữ liệu từ **Data Lakehouse**, xử lý – chuẩn hoá dữ liệu theo các tầng xử lý, và nạp vào **Data Warehouse** phục vụ báo cáo và phân tích.
 
