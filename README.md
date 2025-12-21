@@ -1,5 +1,4 @@
-# pyspark_fabric
-# 🚀 ETL Project: Lakehouse ➜ Data Warehouse using PySpark (Microsoft Fabric)
+# 🚀 ETL Project: Lakehouse ➜ Data Warehouse dùng PySpark Notebook (Microsoft Fabric)
 
 ## 📌 Project Overview
 ![images](ETL_Pyspark.png)
